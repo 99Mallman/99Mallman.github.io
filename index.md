@@ -4,15 +4,15 @@
 
 ### Category Name 1 
 
-[Project 1 Title](/sample_page)
+[Chapter 2 Map](/sample_page)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
+[Chapter 3 Map](/pdf/sample_presentation.pdf)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Project 3 Title](http://example.com/)
+[Chapter 4 Map](http://example.com/)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
