@@ -2,7 +2,7 @@
 
 ---
 
-### Category Name 1 
+### Projects
 
 [Chapter 2 Map](/sample_page)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
