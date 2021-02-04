@@ -1,35 +1,29 @@
-## Portfolio
+# Portfolio
 
 ---
-### Projects
+## Projects
 
-### [Colorado_Potato_Beetle_Risk](/project_probation/index)
+### [Colorado Potato Beetle Risk](/project_probation/index)
 At risk areas of Utah to the Colorado potato beetle.
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[<img src="project_probation/Potato_Beetle_Risk.PNG?raw=true"/>](/project_probation/index)
 
 ---
-[Chapter 3 Map](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+### [Airports of Southern Alaska](/project_probation/index)
+A 3D image of Alaskan airports around the Aluetian Mountain range.
+[<img src="project_probation/3D_Airports.PNG?raw=true"/>](/project_probation/index)
 
 ---
-[Chapter 4 Map](http://example.com/)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+### [Frederick City Floodplains](/project_probation/index)
+A depiction of the buildings and sections of roads of Frederick City that rests within a floodplain.
+[<img src="project_probation/Fred_Risk_map.PNG?raw=true"/>](/project_probation/index)
 
 ---
-
 ### Category Name 2
 
-- [Alaska Airports](file:///C:/Users/micha/AppData/Local/Temp/qgis2web/qgis2web_2021_02_01-21_02_51_158172/index.html)
+- [Project 1 Title](http://example.com/)
 - [Project 2 Title](http://example.com/)
 - [Project 3 Title](http://example.com/)
 - [Project 4 Title](http://example.com/)
 - [Project 5 Title](http://example.com/)
 
 ---
-
-
-
-
----
-<p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
-<!-- Remove above link if you don't want to attibute -->
