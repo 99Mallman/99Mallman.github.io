@@ -1,10 +1,10 @@
 ## Portfolio
 
 ---
-
 ### Projects
 
-[Chapter 2 Map](/sample_page)
+### [Colorado_Potato_Beetle_Risk](/project_probation/index)
+At risk areas of Utah to the Colorado potato beetle.
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
