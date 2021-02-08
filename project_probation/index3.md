@@ -1,6 +1,6 @@
-# Alaskan Airports of Southern Alaska
+# Sources of UMBC Students
 
-**Project description:** This map was created using QGIS in the spring of 2021 for an Advanced GIS course. 
+**Project description:** This map was created using ArcGIS in the fall of 2020 for an Introductional GIS course. 
 
 ```javascript
 if (isAwesome){
