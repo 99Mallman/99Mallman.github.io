@@ -8,7 +8,7 @@ At risk areas of Utah to the Colorado potato beetle.
 [<img src="project_probation/Potato_Beetle_Risk.PNG?raw=true"/>](/project_probation/index)
 
 ---
-### [Airports of Southern Alaska](/project_probation/index)
+### [Airports of Southern Alaska](/project_probation/index2)
 A 3D image of Alaskan airports around the Aluetian Mountain range.
 [<img src="project_probation/3D_Airports.PNG?raw=true"/>](/project_probation/index)
 
