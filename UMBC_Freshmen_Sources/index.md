@@ -1,12 +1,8 @@
-# Alaskan Airports of Southern Alaska
+# Sources of UMBC's 2012 Freshmen
 
-**Project description:** This map was created using QGIS in the spring of 2021 for an Advanced GIS course. 
+**Project description:** This map was created using QGIS in the fall of 2020 for an Introduction to GIS course.  
 
-```javascript
-if (isAwesome){
-  return true
-}
-```
+
 ### 3. Support the selection of appropriate statistical tools and techniques
 
 <img src="images/Potato_Beetle_Risk.PNG?raw=true"/>
