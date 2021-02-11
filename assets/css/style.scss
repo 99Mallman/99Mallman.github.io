@@ -3,6 +3,9 @@
 
 @import "{{ site.theme }}";
 
+body {
+ background-image: linear-gradient(to bottom right, #f5882a, #000000)
+}
 a {
  color:#6a0dad;
 }
