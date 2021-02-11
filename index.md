@@ -13,7 +13,7 @@ A 3D image of Alaskan airports around the Aluetian Mountain range.
 [<img src="project_probation/3D_Airports.PNG?raw=true"/>](/Alaskan_Airports/index)
 
 ---
-### [Sources of UMBC Freshmen](/UMBC_Freshmen_Sources/index3)
+### [Sources of UMBC Freshmen](/UMBC_Freshmen_Sources/index)
 A depiction of where UMBC's 2012 freshmen came from.
 [<img src="project_probation/UMBC_Freshmen.PNG?raw=true"/>](/UMBC_Freshmen_Sources/index)
 
