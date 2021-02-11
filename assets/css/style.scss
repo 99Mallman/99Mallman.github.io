@@ -4,25 +4,27 @@
 @import "{{ site.theme }}";
 
 body {
- background-image: linear-gradient(to bottom right, #f79b19, #f3ff14)
+ background-image: linear-gradient(to bottom right, #dbd3d3, #a3a2a2)
 }
 a {
- color:#f79b19;
+ text-align: center;
+ color:#858585;
 }
 a:hover,
 a:focus {
- color:#c40202;
+ color:#6a10c9;
 }
 a small {
- color:#f79b19;
+ color:##858585;
 }
 a:hover small {
- color:#c40202
+ color:#6a10c9
 }
 
 body {
- font-family: "Comic Sans", Helvetica, Arial, sans-serif;
+ font-family: "Times New Roman", "Times, serif;
  font-size: 105%;
+ color: #858585
 }
 
 h1, h2, h3, h4, h5, h6 {
