@@ -4,20 +4,20 @@
 @import "{{ site.theme }}";
 
 body {
- background-image: linear-gradient(to bottom right, #1fd6ff, #005c8a)
+ background-image: linear-gradient(to bottom right, #f79b19, #f3ff14)
 }
 a {
- color:#ffffff;
+ color:#f79b19;
 }
 a:hover,
 a:focus {
- color:#040f85;
+ color:#c40202;
 }
 a small {
- color:#ff0505;
+ color:#f79b19;
 }
 a:hover small {
- color:#040f85
+ color:#c40202
 }
 
 body {
