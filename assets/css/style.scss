@@ -4,24 +4,24 @@
 @import "{{ site.theme }}";
 
 body {
- background-image: linear-gradient(to bottom right, #1fd6ff, #000000)
+ background-image: linear-gradient(to bottom right, #1fd6ff, #005c8a)
 }
 a {
- color:#ff0505;
+ color:#ffffff;
 }
 a:hover,
 a:focus {
- color:#ff0505;
+ color:#040f85;
 }
 a small {
  color:#ff0505;
 }
 a:hover small {
- color:#ff0505
+ color:#040f85
 }
 
 body {
- font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-family: "Comic Sans", Helvetica, Arial, sans-serif;
  font-size: 105%;
 }
 
