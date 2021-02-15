@@ -4,18 +4,18 @@
 @import "{{ site.theme }}";
 
 body {
- background-image: linear-gradient(to bottom right, #dbd3d3, #a3a2a2)
+ background-image: linear-gradient(to bottom right, #3fcc3f, #0b9e0b)
 }
 a {
  text-align: center;
- color:#858585;
+ color:#636161;
 }
 a:hover,
 a:focus {
  color:#6a10c9;
 }
 a small {
- color:#858585;
+ color:#636161;
 }
 a:hover small {
  color:#6a10c9
@@ -24,7 +24,7 @@ a:hover small {
 body {
  font-family: "Times New Roman", "Times", serif;
  font-size: 105%;
- color: #858585
+ color: #636161
 }
 
 h1, h2, h3, h4, h5, h6 {
