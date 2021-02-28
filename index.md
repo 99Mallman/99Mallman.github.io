@@ -8,9 +8,9 @@ At risk areas of Utah to the Colorado potato beetle.
 [<img src="project_probation/Potato_Beetle_Risk.PNG?raw=true"/>](/project_probation/index)
 
 ---
-### [Airports of Southern Alaska](/Alaskan_Airports/index)
-A 3D image of Alaskan airports around the Aluetian Mountain range.
-[<img src="project_probation/3D_Airports.PNG?raw=true"/>](/Alaskan_Airports/index)
+### [Diamond Head Crater](/Diamond_Head_Crater/index)
+An elevation model of Honolulu's most famous crater.
+[<img src="project_probation/Diamond_Head.PNG?raw=true"/>](/Diamond_Head_Crater/index)
 
 ---
 ### [Sources of UMBC Freshmen](/UMBC_Freshmen_Sources/index)
