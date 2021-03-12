@@ -18,9 +18,9 @@ A depiction of where UMBC's 2012 freshmen came from.
 [<img src="project_probation/UMBC_Freshmen.PNG?raw=true"/>](/UMBC_Freshmen_Sources/index)
 
 ---
-/ ### [Ports of the World](/Lab_5/index)
-/ A webmap of the seaports of the globe.
-/ [<img src="project_probation/UMBC_Freshmen.PNG?raw=true"/>](/UMBC_Freshmen_Sources/index)
+### [Ports of the World](/Lab_5/Ports_Webmap/index)
+A webmap of the seaports of the globe.
+[<img src="Lab_5/UMBC_Freshmen.PNG?raw=true"/>](/Lab_5/Ports_Webmap/index)
 
 ---
 ### Additional Projects
