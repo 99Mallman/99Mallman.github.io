@@ -21,7 +21,7 @@ A depiction of where UMBC's 2012 freshmen came from.
 ### Additional Projects
 
 - [Ports of the World](/Lab_5/Ports_Webmap/index)
-- [Percent Developed Land in Maryland by County](/MD_County_Developed/Allman_Lab_4_Part_2_Mar_2_2021.gif)
+- [Project 2 Title](http://example.com/)
 - [Project 3 Title](http://example.com/)
 - [Project 4 Title](http://example.com/)
 - [Project 5 Title](http://example.com/)
