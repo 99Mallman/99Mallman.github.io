@@ -5,7 +5,7 @@
 
 ### [Maryland Forest Loss](/project1_486/index)
 A representation of forest loss across Maryland from 2001 to 2018.
-[<img src="project_probation/Potato_Beetle_Risk.PNG?raw=true"/>](/project_probation/index)
+[<img src="project_probation/Forest_Loss_imagePNG?raw=true"/>](/project_probation/index)
 
 ---
 ### [Colorado Potato Beetle Risk](/project_probation/index)
