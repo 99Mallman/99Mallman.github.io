@@ -21,7 +21,7 @@ What this map is primarily about is the rate of forest loss by Maryland county. 
 
 The underlying chloropleth map depicts counties with the lowest total forest loss as the darkest green. Ironically, this pust Balitmore City as the "greenest" county. This alone should highlight that this map is restricted in several important ways. The coloring represents the sum alone, the hectares of forest loss proportionate to the county's size is not considered. 54 hectares is more significant in the city than it is in a county like Frederick. Secondly clearing prior to 2001 is not represented. Balitmore City looks green because it's already highly developed. Even so, we know which counties have been experiencing the largest amount of forest loss, and possibly the most development. We also know which counties have been able to maintain their forests.
 
-[<img src="images/logo.png?raw=true"/>](/images/index)
+![Maryland Forest Loss Between 2001 and 2018][<img src="/project1_486/Forest_Loss_image.PNG?raw=true"/>](/project1_486/index)
 
 
 More on [Maryland forests](https://dnr.maryland.gov/forests/pages/mdfacts.aspx#:~:text=Each%20year%20more%20than%206000,of%20forest%20and%20marsh%20land).
