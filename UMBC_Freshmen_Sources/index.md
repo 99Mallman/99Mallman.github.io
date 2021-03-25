@@ -4,5 +4,7 @@
 
 The highest density of freshmen origin is adjacent to the campus. Baltimore County, Montgomary, and Howard look to be the overall darkest three of the state. This means that UMBC draws a large portion of its students from the in state and the closeby cities, which then contributes to the university's high diversity. This trend would also have implications on the income of UMBC. A low percent of out of state students costs the unversity because they can't charge instate students the same price. Not only that but students living in close proximity to campus would more likely choose to commute.
 
+<img width="484" alt="UMBC_Freshmen" src="https://user-images.githubusercontent.com/78063176/112541099-5cafe780-8d89-11eb-9e8f-bc41aebb4956.PNG">
+
 
 For more details see [Welcome to UMBC](https://about.umbc.edu/).
