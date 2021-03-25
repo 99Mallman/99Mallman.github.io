@@ -4,7 +4,7 @@ Project 1 - GES 486
 ---
 ---
 
-## The Plan
+## The Proposal
 
 ### Topic
 I plan to document forest loss across Maryland counties between 2000 and 2018 using a coxcomb map. 
@@ -19,6 +19,23 @@ The major obstacle is that there is no coxcomb option in QGIS that I'm aware of.
 The planned final output will be a coxcomb map. It will have a chloropleth map of the most recent forest cover percentage per county of Maryland laid on top of a basemap. Each county will have a respective coxcomb chart with 18 bars each, one for the amount of forest area lost during each year. Hopefully, the map will reveal whether forest loss is esculating or not on a regional scale. In the event that I am unable to figure out how to create a satisfying coxcomb output I will replace them with barcharts instead or make a gif of the compiled years.
 
 This project will require me to use both Rstudio and QGIS, meaning that I'll be able to portray what I've learned from both tools over the past few weeks. Some functions will be new, like the coxcomb part while others I've done before. I'll be demonstrating that I understand how to search for appropriate functions and data, edit metadata, write functional Markdown syntax, and create an understandable layer view map. To get the Hansen data I need I will be using Google Earth Engines. I have access to a [script](https://code.earthengine.google.com/f379c7c26bea69cdc86ffcbd6737ef7a) that will provide me with the output I desire prepared from a previous project. With a little adjustment I can export a CVS table into my Google drive, then join it to my shapefile.
+
+## Process of Creation
+1. I first downloaded the land cover data from [geodata.md.gov](https://geodata.md.gov/imap/rest/services/PlanningCadastre/MD_LandUseLandCover/MapServer). 
+2. I attempted to insert it into the [GEE script](https://code.earthengine.google.com/f379c7c26bea69cdc86ffcbd6737ef7a) but its projection and geometry were incompatiable with the engine. The point of the shapefile in the script is to define the area of interest, where in the world you want to collect forest data from. I would need the shapefile in the correct projection to obtain my data.
+3. Back in QGIS I inserted the shapefile, fixed its geometry, and then projected it as ESPG: 4326.
+4. Returning to the GEE script I inserted the shapefile and altered the output towards my Drive account. It provided me a CVS with forest cover and loss data between 2001 and 2018. The script was already written to fetch data from the Hansen Census.
+5. I returned again to QGIS and joined the CVS to the reprojected shapefile.
+6. I created a shapefile of the county centroids using a tool in QGIS.
+7. Now turning my eyes to Rstudio I searched for ways to create coxcomb maps and found a source only to soon realize it wouldn't provide the means to overlap the 24 I needed with their correct counties.
+8. I instead used the diagram option in QGIS to display histograms.
+9. Next I created a new field and wrote its value equal to the sum of each county's forest loss.
+10. This field I used under symbology to categorize the counties.
+11. I then selected a basemap I thought offered a complimentary background.
+12. I also decided to use a projection that maintained the accurate area of the land, so I set the projection to ESRI: 102003, an Albers Equal Area variation.
+13. After much fidgeting with the colors and histogram size and placement I felt ready to create a new layout.
+14. The final stages included fixing the tilt of the map, due to the equal area projection, and adding information for the viewer.  
+
 
 ## Description
 The final product is in some parts different than what was initially planned. Most notably the coxcomb charts have been replaced with histograms. For the purposes of this project, they would display the same information, being the general trend of forest loss through the years. Coxcombs would simply provide a tidier look. This decision was based on necessity. Even after searching the internet I was unable to find the appropriate tools required for what I wanted. I had also planned to have a chloropleth map laid beneath the graphs portraying the most recent forest cover percentage of the counties of Maryland. I instead based it on the sum of forest loss of the 18 years. I felt this way provided the viewer the means to understand the scope of the loss and simultaneously give weight to the bar graphs.
