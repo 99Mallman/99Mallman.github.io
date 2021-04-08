@@ -86,11 +86,11 @@ Balt_City_Poverty = left_join(Balt_City_2019, Balt_City_2014,
                               by = "GEOID",
                               suffix = c(".19", ".14"))
 
-# Compute differences in percentage of population between 2019 and 2014.
+# Compute differences in percentage of population in poverty between 2019 and 2014.
 Balt_City_Poverty$poverty_diff = Balt_City_Poverty$below_poverty.19 - Balt_City_Poverty$below_poverty.14
 
-# Compute difference in median household income
-Balt_City_Poverty$median_diff = Balt_City_Poverty$med_grs_rentE.19 - Balt_City_Poverty$med_grs_rentE.14
+# Compute percent change in median gross rent between 2014 and 2019
+Balt_City_Poverty$median_diff = (Balt_City_Poverty$med_grs_rentE.19 - Balt_City_Poverty$med_grs_rentE.14)/Balt_City_Poverty$med_grs_rentE.14
 
 Balt_City_Poverty = st_transform(Balt_City_Poverty, 3857) # reproject into web Mercator.
 ```
