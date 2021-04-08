@@ -8,7 +8,13 @@ The goal of this project was to create an easy-to-read bivariate map comparing t
 ## Data
 
 
-## Transformations
+## Transformations and Process
+
+### Rstudio
+
+### QGIS
+While Rstudio was used to retrieve the data and create the fields we would use, QGIS was used to display the information. A bivariate map requires two separate layers each of a  different variable. For more information about the method visit [bnhr.xyz](https://bnhr.xyz/2019/09/15/bivariate-choropleths-in-qgis.html). How to classify the data was the most important decision in this stage of the project. I decided to use natural breaks for the poverty percentage change because it did well to organize the data between tracts with negative change, near zero, and positive.    
+
 
 ## Analysis
 
