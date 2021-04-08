@@ -8,6 +8,11 @@ A representation of forest loss across Maryland from 2001 to 2018.
 [<img src="project_probation/Forest_Loss_image.PNG?raw=true"/>](/project1_486/index)
 
 ---
+### [Baltimore City Poverty and Rent Change](/project_probation/index)
+A bivariate map comparing the percent change of median gross rent and the population below the poverty line of Baltimore City tracts.
+[<img src="project_probation/Balt_City_Poverty_Rent.PNG?raw=true"/>](/project_probation/index)
+
+---
 ### [Colorado Potato Beetle Risk](/project_probation/index)
 At risk areas of Utah to the Colorado potato beetle.
 [<img src="project_probation/Potato_Beetle_Risk.PNG?raw=true"/>](/project_probation/index)
