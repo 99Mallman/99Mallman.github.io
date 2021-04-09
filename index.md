@@ -8,9 +8,9 @@ A representation of forest loss across Maryland from 2001 to 2018.
 [<img src="project_probation/Forest_Loss_image.PNG?raw=true"/>](/project1_486/index)
 
 ---
-### [Baltimore City Poverty and Rent Change](/project_probation/index)
+### [Baltimore City Poverty and Rent Change](/GES486_lab6/index)
 A bivariate map comparing the percent change of median gross rent and the population below the poverty line of Baltimore City tracts.
-[<img src="project_probation/Balt_Poverty_and_Rent.png?raw=true"/>](/project_probation/index)
+[<img src="project_probation/Balt_Poverty_and_Rent.png?raw=true"/>](/GES486_lab6/index)
 
 ---
 ### [Colorado Potato Beetle Risk](/project_probation/index)
