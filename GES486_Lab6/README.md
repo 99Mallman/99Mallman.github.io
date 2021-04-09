@@ -3,10 +3,10 @@
 This directory is structured to effectively document the process of this project. Any raw data and their sources used in the making of this project can be found in the data folder. The bin folder contains any tampered data sets after transformations have been made. Any files in there can be viewed as intermediate steps made between retrieving the raw data and the final output.
 
 ## Introduction
-The goal of this project was to create an easy-to-read bivariate map comparing the percentage of households with incomes below the poverty level and the median gross rent by Baltimore City tract. 
+The goal of this project was to create an easy-to-read bivariate map comparing the percent change of median gross rent with the percent change in population with incomes below the poverty level for Baltimore City tracts between the years of 2014 and 2019. Thus, correlations in the rise and fall of rents and poverty are illustrated for that time period.
 
 ## Data
-
+The data was provided by the American Census Bureau. American Community Survies (ACS) data is available for free download at [https://www.socialexplorer.com/data/ACS2019_5yr/metadata/?ds=ACS19_5yr](https://www.socialexplorer.com/data/ACS2019_5yr/metadata/?ds=ACS19_5yr). Every table has a different code which can be used to identify the specific data you desire. In R, with an API key, it is possible to extract tables by their codes to download to your computer.
 
 ## Transformations and Process
 
