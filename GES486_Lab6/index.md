@@ -93,10 +93,14 @@ st_write(Balt_City_Poverty, "Balt_City_Poverty_diff.geojson")
 ```
 
 ## About the Project
+This project was done for an Advanced GIS class. The goal was to create a bivariate map comparing the percent change of median gross rent with the percent change in population with incomes below the poverty level for Baltimore City tracts between the years of 2014 and 2019. A detailed description of the process and analysis can be found in the [README.md](https://github.com/99Mallman/99Mallman.github.io/tree/master/GES486_Lab6) file at the backend of my repository. The project was created with census data extracted using Rstudio and then displayed using QGIS. 
 
+A bivariate map compares two variables. Each variable is given a separate color scheme, in this case grey to red and grey to blue. The colors are blended together making a color chart that illustrates every combined option for the classes. Light colors depict tracts of negative change, or loss, in both variables. Dark colors depict tracts that experienced growth in rent and poverty. The middle color of the chart, which is a dark grey, represents small or no change in either variable in the 5 year period. Although it is not shown in the map, the maximum values of rent growth was 130% and the same value for poverty growth was 23%. Prove of this can be found in the repository.
+
+What is notable of this map is where clusters of red or blue tracts can be found. Baltimore City has a history of redlining and seggregation. Much of the red tracts align with these areas. For more information about Baltimore City's historical seggragation, visit [this article from *Brookings*](https://www.brookings.edu/blog/the-avenue/2015/05/11/good-fortune-dire-poverty-and-inequality-in-baltimore-an-american-story/).
 
 ## The final output:
 
-
+![Balt_Poverty_and_Rent](https://user-images.githubusercontent.com/78063176/114249178-df2ece80-9967-11eb-8137-944947cffb47.png)
 
 
