@@ -97,7 +97,7 @@ This project was done for an Advanced GIS class. The goal was to create a bivari
 
 A bivariate map compares two variables. Each variable is given a separate color scheme, in this case grey to red and grey to blue. The colors are blended together making a color chart that illustrates every combined option for the classes. Light colors depict tracts of negative change, or loss, in both variables. Dark colors depict tracts that experienced growth in rent and poverty. The middle color of the chart, which is a dark grey, represents small or no change in either variable in the 5 year period. Although it is not shown in the map, the maximum values of rent growth was 130% and the same value for poverty growth was 23%. Prove of this can be found in the repository.
 
-What is notable of this map is where clusters of red or blue tracts can be found. Baltimore City has a history of redlining and seggregation. Much of the red tracts align with these areas. For more information about Baltimore City's historical seggragation, visit [this article from *Brookings*](https://www.brookings.edu/blog/the-avenue/2015/05/11/good-fortune-dire-poverty-and-inequality-in-baltimore-an-american-story/).
+What is notable of this map is where clusters of red or blue tracts can be found. Baltimore City has a history of redlining and segregation. Much of the red tracts align with these areas. For more information about Baltimore City's historical segregation, visit [this article from *Brookings*](https://www.brookings.edu/blog/the-avenue/2015/05/11/good-fortune-dire-poverty-and-inequality-in-baltimore-an-american-story/).
 
 ## The final output:
 
