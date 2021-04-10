@@ -30,7 +30,7 @@ A depiction of where UMBC's 2012 freshmen came from.
 ---
 ### Additional Projects
 
-- [Ports of the World](/Lab_5/Ports_Webmap/index)
+- [Ports of the World (webmap)](/Lab_5/Ports_Webmap/index)
 - [Esri Storymap of Frederick City Flooding](https://arcg.is/14L1rD0)
 - [Project 3 Title](http://example.com/)
 - [Project 4 Title](http://example.com/)
