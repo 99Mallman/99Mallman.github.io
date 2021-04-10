@@ -2,20 +2,14 @@
 
 ## Collecting the Data:
   
-Title: "Baltimore City Poverty and Rent"
-
-Subtitle: Census Differences GES 486, lab 6
-
-Output: 
-        html_document:
-                keep_md: true
-
+### Baltimore City Poverty and Rent
+Census Differences GES 486, lab 6
 Author: Michael Allman (mallman1@umbc.edu)
+Date: April 6th, 2021
 
-April 6th, 2021
----
 ### Setup
 First, load the packages needed. To gain access to census data request for a api key, which you can find [here](https://api.census.gov/data/key_signup.html). 
+
 ```{r setup}
 # Loading the following packages. Install them if you haven't already.
 library(tidyverse)
@@ -26,11 +20,12 @@ library(ggplot2)
 options(tigris_class = "sf") # Allows me to request data from the census. 
 options(tigris_use_cache = TRUE) # Telling tigris to cache data
 # The following line is in regards to the api key.
-census_api_key("0350d89733e3b28341184bf091a2e7c5283b353d", overwrite = TRUE, install = TRUE)
-readRenviron("~/.Renviron")
+census_api_key("your key here", install = TRUE)
 ```
+
 ### Downloading the data
 The next step is retrieving the data we need for our project. The command 'get_acs' will be used to specify which variables we want to extract. Here's the [Data Dictionary](https://www.socialexplorer.com/data/ACS2019_5yr/metadata/?ds=ACS19_5yr).
+
 ```{r download census}
 # Download data on the ratios of income compared to the poverty level along with median gross rent for 2019.
 Balt_City_2019 = get_acs(geography = "tract",
@@ -63,18 +58,22 @@ st_write(Balt_City_2014, "Balt_City_2014.csv") # Geometry is false.
 ```
 ### Computing the percent under poverty.
 This section is really doing everything twice, once for each year. We add the portion of the population that makes less than half of the poverty level with the portion that makes between half and one. We then divide the sum by the total to get the percentage of the population that live under the poverty level. We use the data that ends with 'E' instead of 'M' because it stands for 'estimate.'
+
 ```{r percent}
 # Compute the percentage under the poverty line for 2019
 Balt_City_2019$below_poverty = (Balt_City_2019$ratio_halfE + Balt_City_2019$ratio_oneE) / Balt_City_2019$total_incomeE
+
 # Compute the percentage under the poverty line for 2014
 Balt_City_2014$below_poverty = (Balt_City_2014$ratio_halfE + Balt_City_2014$ratio_oneE) / Balt_City_2014$total_incomeE
+
 # While here, let's also compute the percentage of the population that is above the poverty line. Because this is simply the inverse of what we just computed above, we can subtract the variables defined above from 1.
+
 # Compute the percentage of population above poverty line for 2019
 Balt_City_2019$above_poverty = 1 - Balt_City_2019$below_poverty
+
 # Compute the percentage of population above poverty line for 2014
 Balt_City_2014$above_poverty = 1 - Balt_City_2014$below_poverty
 ```
-
 ### Merge the two years.
 ```{r merge}
 # Join the two years using the GEOID field. The suffixes are for clarity.
