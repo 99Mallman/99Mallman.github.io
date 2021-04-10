@@ -3,9 +3,11 @@
 ## Collecting the Data:
   
 ### Baltimore City Poverty and Rent
-Census Differences GES 486, lab 6
-Author: Michael Allman (mallman1@umbc.edu)
-Date: April 6th, 2021
+Census Differences GES 486, lab 6 
+
+Michael Allman (mallman1@umbc.edu)
+
+April 6th, 2021
 
 ### Setup
 First, load the packages needed. To gain access to census data request for a api key, which you can find [here](https://api.census.gov/data/key_signup.html). 
