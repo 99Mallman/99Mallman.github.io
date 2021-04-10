@@ -11,15 +11,15 @@ Date: April 6th, 2021
 First, load the packages needed. To gain access to census data request for a api key, which you can find [here](https://api.census.gov/data/key_signup.html). 
 
 ```{r setup}
-# Loading the following packages. Install them if you haven't already.
+#Loading the following packages. Install them if you haven't already.
 library(tidyverse)
 library(tidycensus)
 library(sf)
 library(ggplot2)
-# Settings for tidycensus
-options(tigris_class = "sf") # Allows me to request data from the census. 
+#Settings for tidycensus
+options(tigris_class = "sf") #Allows me to request data from the census. 
 options(tigris_use_cache = TRUE) # Telling tigris to cache data
-# The following line is in regards to the api key.
+#The following line is in regards to the api key.
 census_api_key("your key here", install = TRUE)
 ```
 
@@ -27,7 +27,7 @@ census_api_key("your key here", install = TRUE)
 The next step is retrieving the data we need for our project. The command 'get_acs' will be used to specify which variables we want to extract. Here's the [Data Dictionary](https://www.socialexplorer.com/data/ACS2019_5yr/metadata/?ds=ACS19_5yr).
 
 ```{r download census}
-# Download data on the ratios of income compared to the poverty level along with median gross rent for 2019.
+#Download data on the ratios of income compared to the poverty level along with median gross rent for 2019.
 Balt_City_2019 = get_acs(geography = "tract",
       variables = c("total_income" = "C17002_001", # all ratios
                          "ratio_half" = "C17002_002", # population with incomes less than half of the poverty line.
