@@ -1,4 +1,4 @@
-# Comparison of Percent Change in Median Gross Rent and Percentage Below Poverty Level of Baltimore City Tracts
+# Percent Change of Median Gross Rent and Population Under the Poverty Level for Baltimore City Tracts - 2014 to 2019
 ### GES 486, lab 6
 This directory is structured to effectively document the process of this project. Any raw data and their sources used in the making of this project can be found in the data folder. The bin folder contains any tampered data sets after transformations have been made. Any files in there can be viewed as intermediate steps made between retrieving the raw data and the final output.
 
