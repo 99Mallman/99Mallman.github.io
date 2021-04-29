@@ -4,8 +4,8 @@
 ## Projects
 
 ### [Howard County Race and Wealth Distribution](/Lab_8_GES_486/index)
-A web map displaying a bivariate map comparing the median household income and the population percentage of non-Hispanic Black people for Howard County tracts.
-[<img src="project_probation/Howard_Bivariate.png?raw=true"/>](/Lab_8_GES_486/index)
+A web map displaying a bivariate map comparing the median household income and the population percentage of non-Hispanic Black people for Howard County tracts. Click on the title for more information or the image to go straight to the web map.
+[<img src="project_probation/Howard_Bivariate.png?raw=true"/>](file:///C:/Users/micha/Documents/GES_486/Lab_8/Final_works_8/qgis2web_2021_04_28-17_39_25_072996/index.html#10/39.0821/-76.7491)
 
 ---
 ### [Baltimore City Poverty and Rent Change](/GES486_Lab6/index)
@@ -18,14 +18,14 @@ A representation of forest loss across Maryland from 2001 to 2018.
 [<img src="project_probation/Forest_Loss_image.PNG?raw=true"/>](/project1_486/index)
 
 ---
-### [Colorado Potato Beetle Risk](/project_probation/index)
-At risk areas of Utah to the Colorado potato beetle.
-[<img src="project_probation/Potato_Beetle_Risk.PNG?raw=true"/>](/project_probation/index)
-
----
 ### [Diamond Head Crater](/Diamond_Head_Crater/index)
 An elevation model of Honolulu's most famous crater.
 [<img src="project_probation/Diamond_Head.PNG?raw=true"/>](/Diamond_Head_Crater/index)
+
+---
+### [Colorado Potato Beetle Risk](/project_probation/index)
+At risk areas of Utah to the Colorado potato beetle.
+[<img src="project_probation/Potato_Beetle_Risk.PNG?raw=true"/>](/project_probation/index)
 
 ---
 ### [Sources of UMBC Freshmen](/UMBC_Freshmen_Sources/index)
@@ -38,7 +38,5 @@ A depiction of where UMBC's 2012 freshmen came from.
 - [Ports of the World (webmap)](/Lab_5/Ports_Webmap/index)
 - [Esri Storymap of Frederick City Flooding](https://arcg.is/14L1rD0)
 - [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
 
 ---
