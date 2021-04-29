@@ -3,5 +3,9 @@
 # Description
 
 ### Links
-README
-![web map](file:///C:/Users/micha/Documents/GES_486/Lab_8/Final_works_8/Howard_webmap/index.html#11/39.1892/-76.7656)
+
+Visit this link to learn more about the process of this lab.
+[Backend](/Lab_8_GES_486/README)
+
+View the web map below.
+[web map](/Lab_8_GES_486/Bin/Howard_webmap/index)
