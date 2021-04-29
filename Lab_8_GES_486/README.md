@@ -6,16 +6,17 @@ This repository is structured to clearly document the process of this project. A
 The goal of this project was to create an interactive web map displaying an easy-to-read bivariate map comparing median household income with the population percentage of non-Hispanic Black people for Howard County tracts. This project will hopefully reveal correlations between wealth and race distribution.
 
 ## Data
-The data was provided by the American Census Bureau. American Community Survies (ACS) data is available for free download at [https://www.socialexplorer.com/data/ACS2019_5yr/metadata/?ds=ACS19_5yr](https://www.socialexplorer.com/data/ACS2019_5yr/metadata/?ds=ACS19_5yr). Every table has a different code which can be used to identify the specific data you desire. In Rstudio, with an API key, it is possible to extract tables by their codes to download to your computer. I used the codes BO3002 and B19013 to identify the percent of population and median household income tables respectively in Rstudio for the ACS 2019. The lab asked for the extraction of data for two different counties. I first save the ACS 2019 data for Baltimore City as a geojson file and then did the same for Howard County data, both be found in the data folder.
-
-The ratio of income to poverty level table has 8 fields. The first represents the total, and the remaining seven each contain a different range in ratios. Anything below 1 means that the income is below the poverty level. Therefore I only extracted the fields with ranges below 1, along with the total. The median gross rent is simply one field.
+The data was provided by the American Census Bureau. American Community Survies (ACS) data is available for free download at [https://www.socialexplorer.com/data/ACS2019_5yr/metadata/?ds=ACS19_5yr](https://www.socialexplorer.com/data/ACS2019_5yr/metadata/?ds=ACS19_5yr). Every table has a different code which can be used to identify the specific data you desire. In Rstudio, with an API key, it is possible to extract tables by their codes to download to your computer. I used the codes BO3002 and B19013 to identify the percent of population and median household income tables respectively in Rstudio for the ACS 2019. The lab asked for the extraction of data for two different counties. I first save the ACS 2019 data for Baltimore City as a geojson file and then did the same for Howard County data, both can be found in the data folder.
 
 ## Transformations and Process
 I separate the processes and transformations of data into two sections. First I describe everything I did in Rstudio, then likewise in QGIS.
 
 ### Rstudio
-The entire, uneditted process for which Rstudio was used can be viewed in the index file and I've also uploaded the script straight to the repository. What follows is an explanation of the commands, post-downloading the data. 
+What follows is the entire uneditted process for which Rstudio was used.
 
+
+
+(move these three main transformations to index)
 1. The first change I made to both data sets was add a column of percent population that was non-Hispanic Black. To do so I divided the population of non-Hispanic Blacks by the total population with the following equation: *Howard_income_race$Black_percent = (Howard_income_race$Blck_NonHE / Howard_income_race$total_popE)*.
  
 2. I then reprojected the data using function *st_transform* into Web Mercator. 
