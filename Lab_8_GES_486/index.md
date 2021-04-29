@@ -8,15 +8,15 @@ View the web map [here](/Lab_8_GES_486/Bin/Howard_webmap/index).
 Carto light basemap
 
 ### Transformations
-1. The first change I made to the data set was the addition of a column depicting percent population that was non-Hispanic Black. To do so I divided the population of non-Hispanic Blacks by the total population with the following equation: *Howard_income_race$Percent_Blck = (Howard_income_race$Blck_NonHE / Howard_income_race$total_popE)*.
+1. The first change I made to the data set was the addition of a column depicting percent population that was non-Hispanic Black. To do so I divided the population of non-Hispanic Blacks by the total population with the following equation: `Howard_income_race$Percent_Blck = (Howard_income_race$Blck_NonHE / Howard_income_race$total_popE)`.
  
-2. I then reprojected the data using function *st_transform* into Web Mercator. 
+2. I then reprojected the data using function `st_transform` into Web Mercator. 
 
-3. I created another column using *Howard_income_race = bi_class(Howard_income_race, x = Percent_Blck, y = incomeE, style = "jenks", dim = 3)*. The data was classified based on natural jenks and Rstudio assigned appropriate bivariate classes to the data.
+3. I created another column using `Howard_income_race = bi_class(Howard_income_race, x = Percent_Blck, y = incomeE, style = "jenks", dim = 3)`. The data was classified based on natural jenks and Rstudio assigned appropriate bivariate classes to the data.
 
 4. The data was then written out as a geojson file.
  
-5. In QGIS, the data was exported as a web map using plugin *qgis2web*.
+5. In QGIS, the data was exported as a web map using plugin, qgis2web.
 
 6. The web map lacked a legend so in notepad I wrote in an image and assigned its position.   
 
