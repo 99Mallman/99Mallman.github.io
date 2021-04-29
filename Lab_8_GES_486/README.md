@@ -15,10 +15,11 @@ I separate the processes and transformations of data into two sections. First I 
 What follows is the entire uneditted process for which Rstudio was used.
 
 ---
-title: "Lab 8: Bivariate Mapping in R"
-author: "Michael Allman"
-date: "4/29/21"
-output: html_document
+#### Lab 8: Bivariate Mapping in R
+Michael Allman
+
+4/29/21
+
 ---
 
 ```{r, setup, include=FALSE}
@@ -247,6 +248,6 @@ The web map
 A general look at the city shows a majority of blue and dark grey tracts. This means that most of the city, by space not population, has experienced a rise in rent or relatively small to no change in the five year period. Seeing more blue than red means poverty has largely fallen, in some cases to great extent. But the locations of the red tracts is of significance. Historically marginalized areas appear to be rising in poverty, even where rents are lowered. 
 
 ## Results
-The final output can be found in the bin folder. It reflects the goal of this project and the lessons introduced by this class. The map I created is a bivariate, with red and blue color schemes. Viewers are able to compare the two variables mentioned above quickly and easily for the area. The data sources are listed and a brief description adjacent to the map aims to clarify any confusion a viewer might have.  
+The final output can be found in the bin folder. It reflects the goal of this project and the lessons introduced by this class. The map I created is a bivariate web map, with red and blue color schemes. Viewers are able to compare the two variables mentioned above quickly and easily for the area. The data sources are listed and a brief description adjacent to the map aims to clarify any confusion a viewer might have.  
 
-I used both Rstudio and QGIS in the production of the map. Through the commands and resources I've learned I was able to extract the data I desired and then use it to compute new data to use. I was able to add geometry to the data and save it for farther use. I practiced using joins, tidycensus, and changing projections. In QGIS I applied what I've learned in class to display a professional looking map with multiple blended layers. The color schemes compliment each other and the classification of the data was chosen based on natural breaks due to the nature of the data. This project required knowledge about printing layouts, installing and using plugins, and deciding the appropriate symbology of the layers. I've also taken great care to document my process in a clear way to provide viewers the means to reconstruct the very same map. Through GitHub I'm able to display this project for people to see. If anything, this project represents the power of open source software. The production of professional, informative maps can be done for free if you have only the knowledge to look. 
+I used both Rstudio and QGIS in the production of the map. Through the commands and resources I've learned I was able to extract the data I desired and then use it to compute new data to use. I was able to add geometry to the data and save it for farther use. I practiced using tidycensus, changing projections, and creating bivariate maps. In QGIS I applied what I've learned in class to export a web map. The color schemes compliment each other and the classification of the data was chosen based on natural breaks due to the nature of the data. This project required knowledge about web maps, installing and using plugins, and deciding the appropriate symbology of the layers. I've also taken great care to document my process in a clear way to provide viewers the means to reconstruct the very same map. Through GitHub I'm able to display this project for people to see. If anything, this project represents the power of open source software.
