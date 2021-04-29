@@ -14,24 +14,235 @@ I separate the processes and transformations of data into two sections. First I 
 ### Rstudio
 What follows is the entire uneditted process for which Rstudio was used.
 
+---
+title: "Lab 8: Bivariate Mapping in R"
+author: "Michael Allman"
+date: "4/29/21"
+output: html_document
+---
+
+```{r, setup, include=FALSE}
+#setup
+knitr::opts_knit$set(root.dir = "PATH")
+library(tidyverse)
+library(tidycensus)
+library(ggplot2)
+library(sf)
+library(sp)
+library(stringr)
+# The following line is in regards to the api key.
+census_api_key("YOURKEYHERE", overwrite = TRUE, install = TRUE)
+readRenviron("~/.Renviron")
+```
+
+## Downloading data
+
+**1. Use `tidycensus` to download 1. race/ethnicity (B03002) and 2. median household income for Baltimore City. Store this data in a new object. Choose which race/ethnicity you'd like to relate to income (Non-Hispanic Black and Non-Hispanic White work best). Which census tract has the highest _percentage_ of your target race/ethnicity (and what is the percent) and which has the highest median household income (and how much is it?)? (5 points)** Reminder: Since we will be mapping our data, make sure you include use `geometry = TRUE` in `get_acs()` 
+
+```{r download} 
+# Download total population, population of Blacks, and median household income ACS 2019 Census data from https://www.socialexplorer.com/data/ACS2019_5yr/metadata/?ds=ACS19_5yr for Maine tracts.
+Balt_income_race = get_acs(geography = "tract",
+      variables = c("total_pop" = "B03002_001",# Total population
+                    "Blck_NonH" = "B03002_004", # Non-Hispanic Black population
+                    "income" = "B19013_001"), # Median household income
+      year = 2019,
+survey = "acs5",
+state = c(24),  # FIPS code for Maryland
+county = c(510), # FIPS code for Baltimore City
+geometry = TRUE,
+output = "wide")
+# Compute the percent of the population that is Black.
+Balt_income_race$Percent_Blck = (Balt_income_race$Blck_NonHE / Balt_income_race$total_popE)
+# Create a sf object.
+st_as_sf(Balt_income_race)
+```
+
+**2. Which census tract has the highest percentage of Black people? (and what is the percent) and which has the highest median household income (and how much is it?)? (5 points)**
+```{r max}
+Balt_income_race %>%
+  filter(Percent_Blck == max(Percent_Blck, na.rm = TRUE))
+Balt_income_race %>%
+  filter(incomeE == max(incomeE, na.rm = TRUE))
+# 1.) The tract with the largest percentage of Black people, which equals 99.32%, is number 2007.02. The tract with the highest median house hold income is number 2711.02 and equals $195,156.
+```
+
+**2. Please reproject this data to Web Mercator. (1 points)**
+```{r transform}
+Balt_income_race = st_transform(Balt_income_race, crs = 3857)
+st_crs(Balt_income_race)
+```
+
+**3. Create two plots. In the first plot highlight the tract with the highest concentration of your selected race/eth. In the second plot highlight the tract with the highest median household income? (5 points)**
+
+```{r plot concentration}
+library(dplyr)
+# Define a variable equivalent to the tract with the highest Black percentage.
+Max_percent = Balt_income_race %>%
+  filter(Percent_Blck == max(Percent_Blck, na.rm = TRUE)) 
+ggplot(Balt_income_race) + 
+  geom_sf(aes(fill = cut_number(Percent_Blck, 4))) +
+  geom_sf(data = Max_percent, color = "yellow", fill = "yellow") +
+  scale_fill_brewer(type = "seq", palette = 1,
+                    name = "Percent of Pop that is Black") +
+  labs(title = "Percent of Baltimore City's Non-Hispanic Black Population") +
+  xlab("Longitude") +
+  ylab("Latitude") +
+  theme_bw()
+```
+```{r plot income}
+# Define a variable equivalent to the tract with the highest median income.
+Max_income = Balt_income_race %>%
+  filter(incomeE == max(incomeE, na.rm = TRUE)) 
+ggplot(Balt_income_race) + 
+  geom_sf(aes(fill = cut_number(incomeE, 4))) +
+  geom_sf(data = Max_income, color = "yellow", fill = "yellow") +
+  scale_fill_brewer(type = "seq", palette = 1,
+                    name = "Median Household Income") +
+  labs(title = "Median Household Income in Baltimore City") +
+  xlab("Longitude") +
+  ylab("Latitude") +
+  theme_bw()
+```
+
+**4. Create a third column using the bi_class function from the tutorial. (2 points)**
+```{r bivariate class}
+library(biscale)
+# Create classes
+Balt_income_race = bi_class(Balt_income_race, x = Percent_Blck, y = incomeE, style = "jenks", dim = 3)
+```
+
+**5. Create a bivariate map with your data. (3 points)**  
+```{r bivariate map, results = 'hide'}
+# create map
+bivariate = ggplot() +
+  geom_sf(data = Balt_income_race, mapping = aes(fill = bi_class), color = "white", size = 0.1, show.legend = FALSE) +
+  bi_scale_fill(pal = "DkViolet", dim = 3) +
+  labs(title = "Income and Percent Black People in Baltimore City",
+    subtitle = "Dark Violet Palette") +
+  theme(plot.title = element_text(size=12))
+  bi_theme()
+```
+
+```{r plot bivariate map (no legend)}
+plot(bivariate)
+```
+
+**6. Use the cowplot package and ggdraw, like in the tutorial to add a legend (2 points)**.
+```{r adding legend}
+# Create the legend
+legend = bi_legend(pal = "DkViolet",
+                    dim = 3,
+                    xlab = " Higher % NonHis Black ",
+                    ylab = " Higher Income ",
+                    size = 8)
+# Install cowplot if you haven't already 
+library(cowplot)
+Final_map = ggdraw() +
+  draw_plot(bivariate, 0, 0, .8, 1) +
+  draw_plot(legend, .70, .15, 0.35, 0.35)
+plot(Final_map)
+```
+
+**7. Rinse and repeat for another county of your choosing, using a _different_ color scheme. Be sure to use Psuedo-Mercator (3857). (5 points)**
+```{r Howard County download}
+Howard_income_race = get_acs(geography = "tract",
+      variables = c("total_pop" = "B03002_001",# Total population
+                    "Blck_NonH" = "B03002_004", # Non-Hispanic Black population
+                    "income" = "B19013_001"), # Median household income
+      year = 2019,
+survey = "acs5",
+state = c(24),  # FIPS code for Maryland
+county = c(027), # FIPS code for Baltimore City
+geometry = TRUE,
+output = "wide")
+# Compute the percent of the population that is Black.
+Howard_income_race$Percent_Blck = (Howard_income_race$Blck_NonHE / Howard_income_race$total_popE)
+# Create a sf object.
+st_as_sf(Howard_income_race)
+```
+
+```{r Howard maxes}
+Howard_income_race %>%
+  filter(Percent_Blck == max(Percent_Blck, na.rm = TRUE))
+Howard_income_race %>%
+  filter(incomeE == max(incomeE, na.rm = TRUE))
+# 7.1) The tract with the largest percentage of non-Hispanic Black people, which equals 48.6%, is number 6069.07. The tract with the highest median house hold income is number 6501.04 and equals $220,583.
+```
+
+```{r Howard transform}
+Howard_income_race = st_transform(Howard_income_race, crs = 3857)
+st_crs(Howard_income_race)
+```
 
 
-(move these three main transformations to index)
-1. The first change I made to both data sets was add a column of percent population that was non-Hispanic Black. To do so I divided the population of non-Hispanic Blacks by the total population with the following equation: *Howard_income_race$Black_percent = (Howard_income_race$Blck_NonHE / Howard_income_race$total_popE)*.
- 
-2. I then reprojected the data using function *st_transform* into Web Mercator. 
- 
-3. Bi_class.
+```{r plot concentration Howard}
+# Define a variable equivalent to the tract with the highest percentage of non-Hispanic Blacks for Howard County.
+Max_percent = Howard_income_race %>%
+  filter(Percent_Blck == max(Percent_Blck, na.rm = TRUE)) 
+ggplot(Howard_income_race) + 
+  geom_sf(aes(fill = cut_number(Percent_Blck, 4))) +
+  geom_sf(data = Max_percent, color = "yellow", fill = "yellow") +
+  scale_fill_brewer(type = "seq", palette = 1,
+                    name = "Percent of Pop That is non-Hispanic Black") +
+  labs(title = "Percent of Howard County's non-Hispanic Black Population") +
+  xlab("Longitude") +
+  ylab("Latitude") +
+  theme(plot.title = element_text(size=8)) +
+  theme_bw()
+```
 
-### QGIS
-While Rstudio was used to retrieve the data and create the fields we would use, QGIS was used to display the information. A bivariate map requires two separate layers each of a different variable. For more information about the method visit [bnhr.xyz](https://bnhr.xyz/2019/09/15/bivariate-choropleths-in-qgis.html). Deciding how to classify the data was the most important part in this stage of the project. Since bivariate maps use two or more variables the number of classes are multiplied between the two map layers. For example, three classes for a map when combined become nine. Because of this it is helpful to only have a few classes for each map.
+```{r plot income Howard}
+# Define a variable equivalent to the tract with the highest median income for Howard County.
+Max_income = Howard_income_race %>%
+  filter(incomeE == max(incomeE, na.rm = TRUE)) 
+ggplot(Howard_income_race) + 
+  geom_sf(aes(fill = cut_number(incomeE, 4))) +
+  geom_sf(data = Max_income, color = "yellow", fill = "yellow") +
+  scale_fill_brewer(type = "seq", palette = 1,
+                    name = "Median Household Income") +
+  labs(title = "Median Household Income by Howard County Census Tracts") +
+  xlab("Longitude") +
+  ylab("Latitude") +
+  theme_bw()
+```
 
-I decided to use only three classes for simplicity. I also used natural breaks for the poverty percentage change because it did well to organize the data between tracts with negative change, near zero, and positive. The range of values for the percent change in median gross rent was much larger and so I used natural breaks as I guideline but manually changed the ranges of some classes for more equally divided classes. I set the blending of the top layer to multiply which merged the colors together. Then I added the Stamen Toner Background basemap before lowering its opacity to 10%. A plugin is required to make the appropriate [bivariate legend](https://github.com/webgeodatavore/bivariate_legend/). I used an example from the website linked above and exported my legend as an image.
+```{r bivariate class and map Howard, results = 'hide'}
+# Create classes
+Howard_income_race = bi_class(Howard_income_race, x = Percent_Blck, y = incomeE, style = "jenks", dim = 3)
+# Create map
+Howard_bivariate = ggplot() +
+  geom_sf(data = Howard_income_race, mapping = aes(fill = bi_class), color = "white", size = 0.1, show.legend = FALSE) +
+  bi_scale_fill(pal = "DkViolet", dim = 3) +
+  labs(title = "Income and Percent Non-Hispanic Black in Howard County",
+    subtitle = "Dark Blue (DkBlue) Palette") +
+  theme(plot.title = element_text(size=12))
+  bi_theme()
+```
 
-The next step was to create a print layout. I did so, adding the usual characteristics of a map like the legend, a scale and title, the date, data sources, a brief description of the map, and the creator. Finally, the last step was to export the product an image.
+```{r bivariate plot Howard}
+# Create the legend
+Howard_legend = bi_legend(pal = "DkViolet",
+                    dim = 3,
+                    xlab = " Higher % NonHis Black ",
+                    ylab = " Higher Income ",
+                    size = 8)
+Howard_map = ggdraw() +
+  draw_plot(Howard_bivariate, 0, 0, .8, .8) +
+  draw_plot(Howard_legend, .70, .30, 0.35, 0.35)
+plot(Howard_map)
+```
+
+**8. Write the bi_class output to a geojson file. (1 points)**
+```{r write, eval = FALSE}
+st_write(Howard_income_race, "Howard_income_race.geojson")
+```
+### QGIS and Notepad
+With the geojson written out it was QGIS' job to tidy it up. Because I had already created a column assigning bivariate classes I didn't need to duplicate two layers and blend them together. Instead I needed only to categorize the symbols by their appropriate colors, found [here](https://slu-opengis.github.io/biscale/reference/bi_pal.html). While the `bi_class` function can easily create classes classified by various methods I didn't actually yet know what the ranges of those classes were. To find out, I simply duplicated an extra layer that I would later delete and set its symbology to graduated, value to income, mode to jenks, and classes to 3 to give me the equivalent ranges. I then did the same for the second variable. I used these two layers to create a legend from the bivariate legend plugin, which I screenshotted, and then added the Carto light basemap and lowered its opacity to 80%.
+
+The next step was to prepare the map's attribute data for the web map. I set unwanted fields to hidden and labeled others I wanted to pop up in the web map. Then, using the qgis2web plugin, I exported the web map as a leaflet. The last step was to add the legend to the web map through notepad. This required the addition of two script chunks, the first to define the image, and the second to define its position.
 
 ## Analysis
-I ended up using just two fields of the data sets I saved and imported into QGIS. These were the last two. The one of percent difference in poverty level and the percent change of median gross income. The goal of overlapping them and blending the two layers together was to display which tracts of Baltimore City have increased in poverty and in rent, or vice versa. Grey tracts meant that there was a decrease in rent and poverty between 2014 and 2019. Blue tracts represent those that experienced high rent growth but a loss in poverty. Red tracts are the opposite. Purple tracts are those with an increase in poverty and rent. There are 12 of these in total. For the most part, they are well distributed. Three of them, along with many red tracts, are clustered together in West Baltimore, a section of the city with historic redlining. A second cluster of red tracts runs along the east and southeast sections of the city. Like the first cluster, these tracts too are predominately African American. [This article](https://www.brookings.edu/blog/the-avenue/2015/05/11/good-fortune-dire-poverty-and-inequality-in-baltimore-an-american-story/) has relevant maps on the issue. 
+The web map 
 
 A general look at the city shows a majority of blue and dark grey tracts. This means that most of the city, by space not population, has experienced a rise in rent or relatively small to no change in the five year period. Seeing more blue than red means poverty has largely fallen, in some cases to great extent. But the locations of the red tracts is of significance. Historically marginalized areas appear to be rising in poverty, even where rents are lowered. 
 
