@@ -3,9 +3,9 @@
 ---
 ## Projects
 
-### [Howard County Race and Wealth Distribution](/Lab_8_GES_486/index)
+### [Howard County Race and Income Distribution](/Lab_8_GES_486/index)
 A web map displaying a bivariate map comparing the median household income and the population percentage of non-Hispanic Black people for Howard County tracts. Click on the title for more information or the image to go straight to the web map.
-[<img src="project_probation/Howard_Bivariate.png?raw=true"/>](/Lab_8_GES_486/Bin/Howard_webmap/index.html)
+[<img src="project_probation/Howard_Bivariate.png?raw=true"/>](/Lab_8_GES_486/Bin/Howard_webmap/index)
 
 ---
 ### [Baltimore City Poverty and Rent Change](/GES486_Lab6/index)
