@@ -1,7 +1,10 @@
-# Race and Income Distributions of Howard County - 2019 
+# Median Household Income and Population Percentage of Non-Hispanic Blacks for Howard County - 2019
+
+### Data
+
+### Transformations
 
 ### Description
-
 
 ### Links
 
