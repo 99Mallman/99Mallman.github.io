@@ -1,5 +1,7 @@
 title: "Michael Allman" # your name (or website title) here
+
 logo: "/images/Bio_pic_circle_no_backgorund.png?raw=true" # your photo (or logo) here
+
 description: > # your text below (remove <br> elements if you don't need line breaks)
   <strong>An Undergraduate</strong> in Geography and Environmental Science. Certificate in GIScience.
   <br><br>
@@ -7,5 +9,6 @@ description: > # your text below (remove <br> elements if you don't need line br
   <br><br>
   <a href="www.linkedin.com/in/michael-allman-147b82169/">View My LinkedIn Profile</a> 
   
+ 
 theme: "jekyll-theme-minimal"
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here
