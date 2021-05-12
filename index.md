@@ -1,4 +1,3 @@
-![Allman_Percent_Developed_Land_MD](https://user-images.githubusercontent.com/78063176/117906269-95a50c80-b2a2-11eb-8f96-51ec471ac017.gif)
 # Portfolio
 
 ---
@@ -19,7 +18,7 @@ A representation of forest loss across Maryland from 2001 to 2018.
 [<img src="project_probation/Forest_Loss_image.PNG?raw=true"/>](/project1_486/index)
 
 ---
-### [Frederick County MD Housing Units](/Frederick_Housing/index)
+### [Frederick County Maryland Housing Units](/Frederick_Housing/index)
 A change through time of Maryland housing units.
 ![Allman_Frederick_Housing](https://user-images.githubusercontent.com/78063176/117906030-27604a00-b2a2-11eb-8eec-85c7ce224c8a.gif)
 
