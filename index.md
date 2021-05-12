@@ -23,12 +23,12 @@ An elevation model of Honolulu's most famous crater.
 [<img src="project_probation/Diamond_Head.PNG?raw=true"/>](/Diamond_Head_Crater/index)
 
 ---
-### [Maryland Housing Units](/project_probation/index)
+### [Frederick County MD Housing Units](/project_probation/index)
 A change through time of Maryland housing units.
-[<img src="project_probation/Allman_Frederick_Housing.gif?raw=true"/>](/project_probation/index)
+[<gif src="project_probation/Allman_Frederick_Housing.gif?raw=true"/>](/project_probation/index)
 
 ---
-### [poop](/UMBC_Freshmen_Sources/index)
+### [Maryland poopoo](/UMBC_Freshmen_Sources/index)
 A depiction of where UMBC's 2012 freshmen came from.
 [<img src="project_probation/UMBC_Freshmen.PNG?raw=true"/>](/UMBC_Freshmen_Sources/index)
 
@@ -37,7 +37,7 @@ A depiction of where UMBC's 2012 freshmen came from.
 
 - [Ports of the World (webmap)](/Lab_5/Ports_Webmap/index)
 - [Esri Storymap of Frederick City Flooding](https://arcg.is/14L1rD0)
-- [Colorado Potato Beetle Risk in Utah](<img src="project_probation/Potato_Beetle_Risk.PNG"/>)
-- [Sources of UMBC Freshmen](<img src="project_probation/)
+- [Colorado Potato Beetle Risk in Utah](/project_probation/Potato_Beetle_Risk.PNG)
+- [Sources of UMBC Freshmen](/project_probation/UMBC_Freshmen.PNG)
 
 ---
