@@ -25,12 +25,12 @@ An elevation model of Honolulu's most famous crater.
 ---
 ### [Frederick County MD Housing Units](/project_probation/index)
 A change through time of Maryland housing units.
-[<gif src="project_probation/Allman_Frederick_Housing.gif?raw=true"/>](/project_probation/index)
+[![Allman_Frederick_Housing](https://user-images.githubusercontent.com/78063176/117906030-27604a00-b2a2-11eb-8eec-85c7ce224c8a.gif)
 
 ---
 ### [Maryland poopoo](/UMBC_Freshmen_Sources/index)
 A depiction of where UMBC's 2012 freshmen came from.
-[<img src="project_probation/UMBC_Freshmen.PNG?raw=true"/>](/UMBC_Freshmen_Sources/index)
+[](/UMBC_Freshmen_Sources/index)
 
 ---
 ### Additional Projects
