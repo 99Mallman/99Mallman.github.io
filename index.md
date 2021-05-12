@@ -23,9 +23,9 @@ An elevation model of Honolulu's most famous crater.
 [<img src="project_probation/Diamond_Head.PNG?raw=true"/>](/Diamond_Head_Crater/index)
 
 ---
-### [Colorado Potato Beetle Risk](/project_probation/index)
-At risk areas of Utah to the Colorado potato beetle.
-[<img src="project_probation/Potato_Beetle_Risk.PNG?raw=true"/>](/project_probation/index)
+### [Maryland Housing Units](/project_probation/index)
+A change through time of Maryland housing units.
+[<img src="project_probation/.gif?raw=true"/>](/project_probation/index)
 
 ---
 ### [Sources of UMBC Freshmen](/UMBC_Freshmen_Sources/index)
@@ -37,6 +37,7 @@ A depiction of where UMBC's 2012 freshmen came from.
 
 - [Ports of the World (webmap)](/Lab_5/Ports_Webmap/index)
 - [Esri Storymap of Frederick City Flooding](https://arcg.is/14L1rD0)
-- [Project 3 Title](http://example.com/)
+- [Colorado Potato Beetle Risk in Utah](<img width="303" alt="Potato_Beetle_Risk_Large" src="https://user-images.githubusercontent.com/78063176/117904109-c2572500-b29e-11eb-8c5c-3f3a814437d0.PNG">)
+- [Sources of UMBC Freshmen](<img width="483" alt="UMBC_Freshmen_Large" src="https://user-images.githubusercontent.com/78063176/117904201-e87cc500-b29e-11eb-9bd3-0edefc8b612d.PNG">)
 
 ---
