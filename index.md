@@ -1,3 +1,4 @@
+![Allman_Percent_Developed_Land_MD](https://user-images.githubusercontent.com/78063176/117906269-95a50c80-b2a2-11eb-8f96-51ec471ac017.gif)
 # Portfolio
 
 ---
@@ -18,19 +19,19 @@ A representation of forest loss across Maryland from 2001 to 2018.
 [<img src="project_probation/Forest_Loss_image.PNG?raw=true"/>](/project1_486/index)
 
 ---
+### [Frederick County MD Housing Units](/Frederick_Housing/index)
+A change through time of Maryland housing units.
+![Allman_Frederick_Housing](https://user-images.githubusercontent.com/78063176/117906030-27604a00-b2a2-11eb-8eec-85c7ce224c8a.gif)
+
+---
 ### [Diamond Head Crater](/Diamond_Head_Crater/index)
 An elevation model of Honolulu's most famous crater.
 [<img src="project_probation/Diamond_Head.PNG?raw=true"/>](/Diamond_Head_Crater/index)
 
 ---
-### [Frederick County MD Housing Units](/project_probation/index)
-A change through time of Maryland housing units.
-[![Allman_Frederick_Housing](https://user-images.githubusercontent.com/78063176/117906030-27604a00-b2a2-11eb-8eec-85c7ce224c8a.gif)
-
----
-### [Maryland poopoo](/UMBC_Freshmen_Sources/index)
-A depiction of where UMBC's 2012 freshmen came from.
-[](/UMBC_Freshmen_Sources/index)
+### [Percent of Developed Land in Maryland](/Developed_MD/index)
+A change in percent developed land in Maryland between 1973 and 2010.
+![Allman_Percent_Developed_Land_MD](https://user-images.githubusercontent.com/78063176/117906293-a190ce80-b2a2-11eb-830c-8e9cfd51f285.gif)
 
 ---
 ### Additional Projects
