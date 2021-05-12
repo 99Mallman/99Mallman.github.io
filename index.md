@@ -37,7 +37,7 @@ A depiction of where UMBC's 2012 freshmen came from.
 
 - [Ports of the World (webmap)](/Lab_5/Ports_Webmap/index)
 - [Esri Storymap of Frederick City Flooding](https://arcg.is/14L1rD0)
-- [Colorado Potato Beetle Risk in Utah](/project_probation/)
-- [Sources of UMBC Freshmen](/project_probation/)
+- [Colorado Potato Beetle Risk in Utah](<img src="project_probation/Potato_Beetle_Risk.PNG"/>)
+- [Sources of UMBC Freshmen](<img src="project_probation/)
 
 ---
