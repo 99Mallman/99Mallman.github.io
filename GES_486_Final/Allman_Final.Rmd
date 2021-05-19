@@ -8,7 +8,7 @@ output: html_document
 The goal of this project was to examine the extent to which Maryland lakes are adequately buffered by vegetation. In addition I wanted to compare the extent of buffering to the percent the population working in agriculture to see what patterns would arise. This script downloads data and performs several transformations before exporting the results into QGIS, where the final analysis will be conducted.
 ```{r setup, include=FALSE}
 #setup
-knitr::opts_knit$set(root.dir = "C:/Users/micha/Documents/GES_486/Lab_8/Final_Works_8")
+knitr::opts_knit$set(root.dir = "path")
 library(tidyverse)
 library(tidycensus)
 library(ggplot2)
@@ -18,7 +18,7 @@ library(stringr)
 
 
 # The following line is in regards to the api key.
-census_api_key("0350d89733e3b28341184bf091a2e7c5283b353d", overwrite = TRUE, install = TRUE)
+census_api_key("YOURAPIKEY", overwrite = TRUE, install = TRUE)
 readRenviron("~/.Renviron")
 ```
 
@@ -46,9 +46,9 @@ st_as_sf(MD_agri)
 ```
 I'll now define the data I already downloaded and make sure they're all in the same projection before performing any analysis.
 ```{r read}
-MD_lakes = st_read("C:/Users/micha/Documents/GES_486/Final/Data_Final/Maryland_Waterbodies_Lakes_Detailed", "Maryland_Waterbodies_-_Lakes_(Detailed)")
+MD_lakes = st_read("path/Maryland_Waterbodies_Lakes_Detailed", "Maryland_Waterbodies_-_Lakes_(Detailed)")
 
-MD_streams = st_read("C:/Users/micha/Documents/GES_486/Final/Data_Final/Maryland_Waterbodies_Streams", "HYDR_RiversStreamsDetailed_SHA")
+MD_streams = st_read("path/Maryland_Waterbodies_Streams", "HYDR_RiversStreamsDetailed_SHA")
 ```
 
 Now to reproject to an equal area projection because area will be important. In this case I use EPSG: 5070.
@@ -62,8 +62,8 @@ MD_streams = st_transform(MD_streams, crs = 5070)
 
 Several following steps of the project will be done in GQIS. Transformations will include creating buffers for the lakes and streams and then calculating the percent of that area which actually meets the standards set by Maryland legislation. According to [the Maryland Department of Natural Resources](https://dnr.maryland.gov/forests/Pages/programapps/ripfbi.aspx#:~:text=Buffer%20widths%20of%2050%2D100,quality%20and%20fish%20habitat%20improvement) the appropriate width of forested buffers is 50 to 100 feet. For the purposes of this project streams, being numerous and small, will be given the low end of 50 foot buffers while lakes will have 100 foot buffers. Due to time constraints, only the percent of adequately buffered lake area will be calculated.
 ```{r write, eval=FALSE}
-st_write(MD_lakes, "C:/Users/micha/Documents/GES_486/Final/MD_lakes.shp")
-st_write(MD_streams, "C:/Users/micha/Documents/GES_486/Final/MD_streams.shp")
+st_write(MD_lakes, "path/MD_lakes.shp")
+st_write(MD_streams, "path/MD_streams.shp")
 ```
 
 ### Joining QGIS Findings and Bivariate Classes
@@ -72,7 +72,7 @@ Having done some analysis in QGIS, it's time to integrate the census data. I cre
 ```{r joining data}
 # I wrote the new data down on a csv file. I'll have to read that file in and then use an appropriate join to merge it with the MD_agri file.
 
-MD_per_buffered = read_csv("C:/Users/micha/Documents/GES_486/Final/Data_Final/MD_Buffer_Percents.csv")
+MD_per_buffered = read_csv("path/MD_Buffer_Percents.csv")
 
 MD_agri_buffer = left_join(MD_agri, MD_per_buffered,
                               by = "NAME")
@@ -119,7 +119,7 @@ plot(MD_bivariate)
 
 I'll now export this as a shapefile so that I can use it to create a layout map and web map and QGIS. I'll also create a legend for the bivariate map.
 ```{r export, eval=FALSE}
-st_write(MD_agri_buffer, "C:/Users/micha/Documents/GES_486/Final/Bin_Final/MD_agri_buffer.shp")
+st_write(MD_agri_buffer, "path/MD_agri_buffer.shp")
 ```
 
 
