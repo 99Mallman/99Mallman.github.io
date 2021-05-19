@@ -1,4 +1,4 @@
-# Percent of Lake Buffer Area Adequately Forested in Maryland
+# Lake Forested Lake Buffers of Maryland
 ### GES 486, Final
 This repository is structured to clearly document the process of this project. Any raw data and their sources used in the making of this project can be found in the data folder. The bin folder contains any tampered data sets after transformations have been made. Any files in it can be viewed as intermediate steps made between retrieving the raw data and the final output.
 
@@ -148,6 +148,7 @@ st_write(MD_agri_buffer, "C:/Users/micha/Documents/GES_486/Final/Bin_Final/MD_ag
 4.)
 
 5.)
+
 
 
 
