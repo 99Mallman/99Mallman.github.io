@@ -149,7 +149,13 @@ st_write(MD_agri_buffer, "C:/Users/micha/Documents/GES_486/Final/Bin_Final/MD_ag
 
 5.)
 
+## Analysis
+The web map tells us that much of Howard County is predominately White and wealthy. In fact, with a lowest median household income of $65,400 Howard County is overall a comfortable region of the nation. The wealthiest tracts rest in the western 2/3 of the county. They are also pretty much entirely White. These large tracts are much less dense in population and sport dotted farms and towns. A density map by engineer Frank Hecker found [here](https://civilityandtruth.com/2019/09/12/howard-county-divided-by-density/) assists in explaining what this web map is displaying. The Black populations are shown to be concentrated in the cities, but not all the cities. Ellicot city remains highly White while Columbia, Elkridge, and Jessup feature clusters of red tracts. There hasn't been much integration beyond the cities. An interesting feature to note is the absence of a single 3-3 class with both vairables falling in the largest class. There are no tracts with 27% or more Black citizens with median incomes above or equal to $163,700. While the tracts with high Black populations remain around $90,000 in median income, the majority of them still fall in the lowest income class. Wealth doesn't appear to be distributed evenly through space or among races.  
 
+## Results
+The final output can be found in the bin folder. It reflects the goal of this project and the lessons introduced by this class. The map I created is a bivariate web map, with red and blue color schemes. Viewers are able to compare the two variables mentioned above quickly and easily for the area. The data sources are listed and a brief description adjacent to the map aims to clarify any confusion a viewer might have.  
+
+I used both Rstudio and QGIS in the production of the map. Through the commands and resources I've learned I was able to extract the data I desired and then use it to compute new data to use. I was able to add geometry to the data and save it for farther use. I practiced using tidycensus, changing projections, and creating bivariate maps. In QGIS I applied what I've learned in class to export a web map. The color schemes compliment each other and the classification of the data was chosen based on natural breaks due to the nature of the data. This project required knowledge about web maps, installing and using plugins, and deciding the appropriate symbology of the layers. I've also taken great care to document my process in a clear way to provide viewers the means to reconstruct the very same map. Through GitHub I'm able to display this project for people to see. If anything, this project represents the power of open source software.
 
 
 
