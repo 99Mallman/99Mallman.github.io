@@ -39,7 +39,7 @@ census_api_key("YOURKEYHERE", overwrite = TRUE, install = TRUE)
 readRenviron("~/.Renviron")
 ```
 
-## Downloading data
+#### Downloading data
 I have downloaded shapefiles of Maryland canopy, streams, and lakes separately. These all can be found at [Maryland.gov](https://data.imap.maryland.gov/). 
 
 I used `tidycensus` to download the total working population (C24010_001) and those of which work in agriculture (C24010_019 and C24010_031) for all of Maryland by counties. The above codes also include foresters and fishermen but the detailed occupation table data, which exclusively provides agricultural occupations, did not appear to be complete so this data set is a compromise.
@@ -83,7 +83,7 @@ st_write(MD_lakes, "path/MD_lakes.shp")
 st_write(MD_streams, "path/MD_streams.shp")
 ```
 
-### Joining QGIS Findings and Bivariate Classes
+#### Joining QGIS Findings and Bivariate Classes
 
 Having done some analysis in QGIS, it's time to integrate the census data. I created a new layer of polygons that represent areas of less than 10% vegetation within Maryland lake buffer zones. I then used the field calculator to find out the total area of non-vegetated lake buffer perimeter and then the total buffer area for each Maryland county. Dividing the former by the latter gave me the percent area of lake perimeters that aren't adequately buffered per county. This section will be creating bivariate classes to express a comparison between agriculture and adequately buffered lakes.
 ```{r joining data}
