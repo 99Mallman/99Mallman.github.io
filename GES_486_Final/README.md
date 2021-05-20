@@ -1,4 +1,4 @@
-# Lake Forested Lake Buffers of Maryland
+# Forested Lake Buffers of Maryland
 ### GES 486, Final
 This repository is structured to clearly document the process of this project. Any raw data and their sources used in the making of this project can be found in the data folder. The bin folder contains any tampered data sets after transformations have been made. Any files in it can be viewed as intermediate steps made between retrieving the raw data and the final output.
 
@@ -6,9 +6,9 @@ This repository is structured to clearly document the process of this project. A
 The goal of this project was to create several different forms of maps that explore how well Maryland lakes are buffered with vegetation. Maryland defines forested areas as [10% canopy](https://dnr.maryland.gov/forests/Pages/Forest-Tree-Data.aspx#:~:text=Resolution%3A%20The%20FIA%20considers%20a,at%20least%20120%20feet%20wide) and recommends at least [50 to 100 foot buffers](https://dnr.maryland.gov/forests/Pages/programapps/ripfbi.aspx#:~:text=Buffer%20widths%20of%2050%2D100,quality%20and%20fish%20habitat%20improvement). This project includes three separate maps. The first depicts the percent of of adequately buffered area by Maryland county in relation to to canopy cover. The second is a bivariate map comparing the same variable as before with the percent of the working population in agriculture. The last is an interactive web map so views can explore individual Maryland lakes.  
 
 ## Data
-Most of the data was provided by [Maryland.gov](https://data.imap.maryland.gov/). From there I downloaded and used four shapefiles. [Land cover](https://data.imap.maryland.gov/datasets/maryland-land-use-land-cover-county-land-use-land-cover-2010?geometry=-80.737%2C38.071%2C-73.799%2C39.568), [canopy cover](https://data.imap.maryland.gov/), [lakes (detailed)](https://data.imap.maryland.gov/datasets/71a539948a5b4751b3b676aec5368ed5_3?geometry=-76.950%2C39.430%2C-76.516%2C39.523), and [streams (detailed)](https://data.imap.maryland.gov/datasets/maryland-waterbodies-rivers-and-streams-detailed?geometry=-80.737%2C38.070%2C-73.799%2C39.568). I also used data provided by the American Census Bureau. American Community Survies (ACS) data is available for free download at [https://www.socialexplorer.com/data/ACS2019_5yr/metadata/?ds=ACS19_5yr](https://www.socialexplorer.com/data/ACS2019_5yr/metadata/?ds=ACS19_5yr). Every table has a different code which can be used to identify the specific data you desire. In Rstudio, with an API key, it is possible to extract tables by their codes to download to your computer. I used the codes  C24010_001, C24010_067, and C24010_031 to identify the percent of working population in agriculture in Rstudio for the ACS 2019.
+Most of the data was provided by [Maryland.gov](https://data.imap.maryland.gov/). From there I downloaded and used three shapefiles and a raster data set. [Land cover](https://data.imap.maryland.gov/datasets/maryland-land-use-land-cover-county-land-use-land-cover-2010?geometry=-80.737%2C38.071%2C-73.799%2C39.568), [lakes (detailed)](https://data.imap.maryland.gov/datasets/71a539948a5b4751b3b676aec5368ed5_3?geometry=-76.950%2C39.430%2C-76.516%2C39.523), and [streams (detailed)](https://data.imap.maryland.gov/datasets/maryland-waterbodies-rivers-and-streams-detailed?geometry=-80.737%2C38.070%2C-73.799%2C39.568). The raster data was the [canopy cover](https://data.imap.maryland.gov/). I also used data provided by the American Census Bureau. American Community Survies (ACS) data is available for free download at [https://www.socialexplorer.com/data/ACS2019_5yr/metadata/?ds=ACS19_5yr](https://www.socialexplorer.com/data/ACS2019_5yr/metadata/?ds=ACS19_5yr). Every table has a different code which can be used to identify the specific data you desire. In Rstudio, with an API key, it is possible to extract tables by their codes to download to your computer. I used the codes  C24010_001, C24010_067, and C24010_031 to identify the percent of working population in agriculture in Rstudio for the ACS 2019.
 
-## Transformations and Process
+## Analysis and Transformations
 I separate the processes and transformations of data into two sections. First I describe everything I did in Rstudio, then likewise in QGIS.
 
 ### Rstudio
@@ -139,18 +139,15 @@ I'll now export this as a shapefile so that I can use it to create a layout map 
 st_write(MD_agri_buffer, "C:/Users/micha/Documents/GES_486/Final/Bin_Final/MD_agri_buffer.shp")
 ```
 ### QGIS
-1.)
+1.) The first change I did made after importing the shapefiles and raster file into QGIS was to use the `buffer` function on the lakes and streams. From the Maryland DNR source linked earlier, I decided to set the boundaries to 50 feet for the streams and 100 feet for the lakes. I saved the two outcomes and the buffered lake shapefile can be found in the bin folder. The buffered stream file was too large to upload.
 
-2.)
+2.) The next step was to use the `difference` function between the lakes and their buffers to remove the interior of the buffers because it was only the area of that 1oo foot wide perimeter around the lakes that acts as a buffer and can be vegetated. I could not do the same for the streams because it was a line file. 
 
-3.)
+3.) At this point I used the raster file, setting its symbology so that any cell with greater or equal to 10% to green so I knew approximately where there was canopy and where there wasn't. I then ensured that the buffered difference lake shapefile was in the same projection as the canopy cover raster file before turning its opacity down and setting it as the top layer. 
 
-4.)
+4.) The following step was to identify where the buffered difference lake shapefile overlapped with white cells, areas within the buffer range that weren't canopy, and mark their locations in some way. For lack of a better method, I did this by hand through creating a new layer of polygons.
 
 5.)
-
-## Analysis
-The web map tells us that much of Howard County is predominately White and wealthy. In fact, with a lowest median household income of $65,400 Howard County is overall a comfortable region of the nation. The wealthiest tracts rest in the western 2/3 of the county. They are also pretty much entirely White. These large tracts are much less dense in population and sport dotted farms and towns. A density map by engineer Frank Hecker found [here](https://civilityandtruth.com/2019/09/12/howard-county-divided-by-density/) assists in explaining what this web map is displaying. The Black populations are shown to be concentrated in the cities, but not all the cities. Ellicot city remains highly White while Columbia, Elkridge, and Jessup feature clusters of red tracts. There hasn't been much integration beyond the cities. An interesting feature to note is the absence of a single 3-3 class with both vairables falling in the largest class. There are no tracts with 27% or more Black citizens with median incomes above or equal to $163,700. While the tracts with high Black populations remain around $90,000 in median income, the majority of them still fall in the lowest income class. Wealth doesn't appear to be distributed evenly through space or among races.  
 
 ## Results
 The final output can be found in the bin folder. It reflects the goal of this project and the lessons introduced by this class. The map I created is a bivariate web map, with red and blue color schemes. Viewers are able to compare the two variables mentioned above quickly and easily for the area. The data sources are listed and a brief description adjacent to the map aims to clarify any confusion a viewer might have.  
