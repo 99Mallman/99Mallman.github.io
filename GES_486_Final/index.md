@@ -13,4 +13,4 @@
 
 ## Results
 
-For a closer look, explore each lake in turn [here](/GES_486_Final/Bin/MD_Webmap), at this web map.
+For a closer look, explore each lake in turn [here](/GES_486_Final/Bin/MD_Webmap/index), at this web map.
