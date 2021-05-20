@@ -145,12 +145,32 @@ st_write(MD_agri_buffer, "C:/Users/micha/Documents/GES_486/Final/Bin_Final/MD_ag
 
 3.) At this point I used the raster file, setting its symbology so that any cell with greater or equal to 10% to green so I knew approximately where there was canopy and where there wasn't. I then ensured that the buffered difference lake shapefile was in the same projection as the canopy cover raster file before turning its opacity down and setting it as the top layer. 
 
-4.) The following step was to identify where the buffered difference lake shapefile overlapped with white cells, areas within the buffer range that weren't canopy, and mark their locations in some way. For lack of a better method, I did this by hand through creating a new layer of polygons.
+4.) The following step was to identify where the buffered difference lake shapefile overlapped with white cells, areas within the buffer range that weren't canopy, and mark their locations in some way. For lack of a better method, I did this by hand through creating a new layer of polygons. In this layer I documented which county each polygon belonged to.
 
-5.)
+5.) After that task was finished I reprojected the new layer into ESRI: 102003, an equal area projection. I then used the field calculator to find the areas of each polygon.
+
+6.) I then used the select and statistical summary tools to find the sum total area of non-vegetated buffer space for each county. I documented this in Excel.
+
+7.)  I did the same for the total perimeter area for each county. This was less simple because some lakes straddle county lines, meaning part of their buffer zone is in one county and another part in a different one. This required me to use the `clip` function and selection tool to only count the perimeter space within a county.
+
+8.) I used Excel to divide the data from step six by the step seven data and multiplied by 100 to find the percent of lake buffer area in each county that wasn't forested.
+
+9.) As shown in above, I saved this Excel sheet as a csv and used Rstudio to join it with the agricultural data I had previously downloaded.
+
+10.) Once the bivariate class field was added and the shapefile was exported, I had what I needed to finish my first two maps. I laid out the layers as I wanted and used the printout feature to construct a fully realized map with a title, legend, and the likes.
+
+11.) With the first map exported the next step was to make the bivariate map. I used this [website](https://slu-opengis.github.io/biscale/reference/bi_pal.html) to pick a color scheme for the bivariate classes and set the colors accordingly. It provides several tried and tested color schemes and lists the hex codes for each with their respective class. I wanted green to represent higher percent forests and avoided red to accompany it.
+
+12.) I then duplicated the layer twice and assigned both three quantile classes. One depicted the percent of agricultural workers and the other the percent buffer area that is forested. The point of this was to find the thresholds of each bivariate class and construct a legend.
+
+13.) I used the bivariate legend to capture an image of the legend I would use and then constructed my final bivariate product in a printout.
+
+14.) The final map was a web map. I used the qgis2web plugin for this part. There were some obstacles to overcome. The first was that the streams and buffered streams were far too large. They created long and often incomplete loading sessions. Since they were only there for the visuals I decided to remove them.
+
+15.) The next issue was that after the web map was exported the tiff raster file of the canopy cover was left blank. I visited [stackexchange.com](https://gis.stackexchange.com/questions/154651/qgis2web-plugin-openlayer3-for-qgis-not-exporting-raster-images) to assist me in finding a solution. I found there that saving the file as an image and decreasing its size solved this issue.
 
 ## Results
-The final output can be found in the bin folder. It reflects the goal of this project and the lessons introduced by this class. The map I created is a bivariate web map, with red and blue color schemes. Viewers are able to compare the two variables mentioned above quickly and easily for the area. The data sources are listed and a brief description adjacent to the map aims to clarify any confusion a viewer might have.  
+The final outputs can be found in the bin folder. 
 
 I used both Rstudio and QGIS in the production of the map. Through the commands and resources I've learned I was able to extract the data I desired and then use it to compute new data to use. I was able to add geometry to the data and save it for farther use. I practiced using tidycensus, changing projections, and creating bivariate maps. In QGIS I applied what I've learned in class to export a web map. The color schemes compliment each other and the classification of the data was chosen based on natural breaks due to the nature of the data. This project required knowledge about web maps, installing and using plugins, and deciding the appropriate symbology of the layers. I've also taken great care to document my process in a clear way to provide viewers the means to reconstruct the very same map. Through GitHub I'm able to display this project for people to see. If anything, this project represents the power of open source software.
 
