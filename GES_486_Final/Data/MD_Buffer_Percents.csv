@@ -1,0 +1,25 @@
+GEOID,NAME,NON_VEG,TOT_AREA,PER_NON,PER_VEG
+24023,"Garrett County, Maryland",1081870,5168817,20.9,79.1
+24001,"Allegany County, Maryland",85638,270260,31.7,68.3
+24043,"Washington County, Maryland",170135,459479,37.0,63.0
+24021,"Frederick County, Maryland",407997,1794090,22.7,77.3
+24013,"Carroll County, Maryland",373207,2313241,16.1,83.9
+24005,"Baltimore County, Maryland",484192,5406357,9.0,91.0
+24510,"Baltimore city, Maryland",113233,178913,63.3,36.7
+24025,"Harford County, Maryland",51350,547538,9.4,90.6
+24015,"Cecil County, Maryland",195746,737150,26.6,73.4
+24031,"Montgomery County, Maryland",293412,2727962,10.8,89.2
+24027,"Howard County, Maryland",87820,1630756,5.4,94.6
+24003,"Anne Arundel County, Maryland",190760,1012230,18.8,81.2
+24033,"Prince George's County, Maryland",387308,1473289,26.3,73.7
+24009,"Calvert County, Maryland",69886,636885,11.0,89.0
+24017,"Charles County, Maryland",92299,512512,18.0,82.0
+24037,"St. Mary's County, Maryland",109774,691086,15.9,84.1
+24029,"Kent County, Maryland",417852,1114200,37.5,62.5
+24035,"Queen Anne's County, Maryland",155300,447244,34.7,65.3
+24011,"Caroline County, Maryland",74102,559359,13.2,86.8
+24041,"Talbot County, Maryland",151916,311844,48.7,51.3
+24019,"Dorchester County, Maryland",467567,1248940,37.4,62.6
+24045,"Wicomico County, Maryland",122782,1357495,9.0,91.0
+24047,"Worcester County, Maryland",347095,1035690,33.5,66.5
+24039,"Somerset County, Maryland",22903,139367,16.4,83.6
