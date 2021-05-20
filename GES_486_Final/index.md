@@ -1,15 +1,19 @@
 # Forested Lake Buffers in Maryland
-This project serves as the final of my Advanced GIS course. It was my goal to compile as many skills I had learned over the semester into one project as I could with the time that I had. In this case, I explored the extent to which the areas immediately adjacent to Maryland lakes are forested. There are three maps in total, each with a different function. The process by which this project was created can be found [here](https://github.com/99Mallman/99Mallman.github.io/tree/master/GES_486_Final).
+This project serves as the final of my Advanced GIS course. It was my goal to use as many of the skills that I learned over the semester as I could into one project with the time that I had. In this case, I explored the extent to which the areas immediately adjacent to Maryland lakes are forested. There are three maps in total, each with a different function. The process by which this project was created can be found [here](https://github.com/99Mallman/99Mallman.github.io/tree/master/GES_486_Final).
 
 ## Background
+Vegetated buffers surrounding lakes, rivers and streams have a myriad of [benefits](https://blog.lakefrontliving.com/benefits-creating-buffer-zone-lake-shoreline/#:~:text=Vegetative%20buffers%20can%20help%20protect,filter%20pollutants%2C%20nutrients%20and%20sediment.) to their health. They limit runoff, catch pollutants and sediments, offer a unique transitional environment for the wildlife, protect banks from erosion, and reduce flooding to name a few. The primary goal of this project was to find the extent to which Maryland lakes are actually buffered. Because the streams that feed into lakes carry their pollutants, nutrients, and sediment with them, the health of the lake will be influenced by its streams. It was my initial intention to extend my goal to the buffered area of Maryland's streams and would do so with more time. Maryland defines forest as [10% canopy cover, 120 feet wide, and an acre in area](https://dnr.maryland.gov/forests/Pages/Forest-Tree-Data.aspx#:~:text=Resolution%3A%20The%20FIA%20considers%20a,at%20least%20120%20feet%20wide). Maryland also recommends [50 to 100 foot wide buffers](https://dnr.maryland.gov/forests/Pages/programapps/ripfbi.aspx#:~:text=Buffer%20widths%20of%2050%2D100,quality%20and%20fish%20habitat%20improvement). I decided to use 100 foot buffers for this project. 
 
+By extention, the primary contributor of harmful substances in lakes and streams is agriculture. Irrigation can lower the base flow of streams. Pesticides are commonly carried by rain into waterbodies and intense cultrivation can increase [bank erosion](https://www.shorelandmanagement.org/quick/ea.html#:~:text=Base%20flow%20in%20nearby%20streams,load%20in%20lakes%20and%20rivers.&text=Increased%20sediment%20can%20reduce%20flood,flows%2C%20habitat%2C%20and%20aesthetics.). Runoff carrying manure, containing nitrogen and phosphorous, in large concentrations have been known to facilitate [dead zones](https://www.cbf.org/issues/dead-zones/index.html#:~:text=When%20there%20are%20excessive%20amounts,oxygen%20from%20the%20surrounding%20water.). In an attempt to at least partially account for this I included a bivariate map comparing agricultural workers with the forested buffer area. To find out more on water quality in Maryland you can visit the [WQP website](https://www.waterqualitydata.us/coverage/).
 
 ![Percent of Lake Buffer Area Adequately Forested in Maryland](https://user-images.githubusercontent.com/78063176/118919073-d683cd80-b901-11eb-9afb-ce30ef520756.png)
 
 ## Description
-
+This map relates several factors. At the bottom is a basemap for spatial reference. Above that is a choropleth map of each county's percent area of lake buffer area that contains forest, or more accurately 10% or more canopy cover. The process by which this was done can be found in the link above. Above that still is a raster file of Maryland canopy cover. It serves as comparison between a county's percentage and shown canopy. Lastly, laid on top, are the Maryland lakes.
 
 ## Results
+
+
 
 ---
 ---
