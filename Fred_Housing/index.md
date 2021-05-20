@@ -26,7 +26,7 @@ options(tigris_use_cache = TRUE)
 census_api_key("YOURKEYHERE", overwrite = TRUE, install = TRUE)
 readRenviron("~/.Renviron")
 ```
-##### Get Census Data
+#### Get Census Data
 Use the get_arcs command to get data from the Census. Here's the [Data Dictionary from Social Explorer](https://www.socialexplorer.com/data/ACS2019_5yr/metadata/?ds=ACS19_5yr)
 
 ```{r download census}
@@ -62,7 +62,7 @@ Fred_hu_09 = get_acs(geography = "tract",
                   geometry = TRUE,
                   output = "wide")
 ```
-##### Reproject Data
+#### Reproject Data
 ```{r test output}
 # This reprojects the 2019 data.
 Fred_hu_19 = st_transform(Fred_hu_19, 3857)
@@ -74,7 +74,7 @@ Fred_hu_14 = st_transform(Fred_hu_14, 3857)
 Fred_hu_09 = st_transform(Fred_hu_09, 3857)
 ```
 
-##### Export data so that it can be imported into QGIS.
+#### Export data so that it can be imported into QGIS.
 
 ```{r Export Data}
 st_write(Fred_hu_19, "Fred_hu_19.geojson")
