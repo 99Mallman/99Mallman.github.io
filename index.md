@@ -3,10 +3,11 @@
 ---
 ## Projects
 
-### [Forested Lake Buffers in Maryland](/Final_GES_486/index)
+### [Forested Lake Buffers in Maryland](/GES_486_Final/index)
 A collection of maps exploring the extent of Maryland lake perimeters that are adequately forested.
-[<img src="?raw=true"/>](/Final_GES_486/index)
+[<img src="GES_486_Final/Bin/Allman_Lake_Buffers.png?raw=true"/>](/GES_486_Final/index)
 
+---
 ### [Howard County Race and Income Distribution](/Lab_8_GES_486/index)
 A web map displaying a bivariate map comparing the median household income and the population percentage of non-Hispanic Black people for Howard County tracts. Click on the title for more information or the image to go straight to the web map.
 [<img src="project_probation/Howard_Bivariate.png?raw=true"/>](/Lab_8_GES_486/Bin/Howard_webmap/index)
