@@ -9,7 +9,9 @@ By extention, the primary contributor of harmful substances in lakes and streams
 ![Percent of Lake Buffer Area Adequately Forested in Maryland](https://user-images.githubusercontent.com/78063176/118919073-d683cd80-b901-11eb-9afb-ce30ef520756.png)
 
 ## Description
-This map relates several factors. At the bottom is a basemap for spatial reference. Above that is a choropleth map of each county's percent area of lake buffer area that contains forest, or more accurately 10% or more canopy cover. A dark colored county represents one that, for the most part, has vegetation surrounding its lakes. The process by which this was done can be found in the link above. Above that still is a raster file of Maryland canopy cover. It serves as comparison between a county's percentage and shown canopy. Unfortunately,  Lastly, laid on top, are the Maryland lakes.
+This map relates several factors. At the bottom is a basemap for spatial reference. Above that is a choropleth map of each county's percent area of lake buffer area that contains forest, or more accurately 10% or more canopy cover. A dark colored county represents one that, for the most part, has vegetation surrounding its lakes. The process by which this was done can be found in the link above. Above that still is a raster file of Maryland canopy cover. It serves as comparison between a county's percentage and shown canopy. The data for this file is unfortunately incomplete, as you can see. Large chunks of data are missing, in some cases because of unaccounted for water but this isn't always the case. A notable missing section extends between Carroll and Baltimore county. The canopy cover data set is also in 30 meter resolution. Lastly, laid on top, are the Maryland lakes. The streams and their buffers were not included so not to cluster the map.
+
+## Results
 
 ---
 ---
@@ -18,6 +20,7 @@ This map relates several factors. At the bottom is a basemap for spatial referen
 ## Description
 
 
+## Results
 
 
-For a closer look explore each lake in turn [here](/GES_486_Final/Bin/MD_Webmap/index), at this web map. As a friendly warning, this web map contains large datasets and is slow to respond. I recommend navigating through use of the + and - signs or by clicking on the lakes.
+For a closer look, explore each lake in turn [here](/GES_486_Final/Bin/MD_lakes_webmap/index), at this webmap. You'll notice that the webmap doesn't contain the canopy cover file that I used to find the buffer areas without vegetation. It has been replaced by the ESRI imagery basemap for two reasons. The first is that the raster file was too large and caused a highly delayed response time of any inputs to the system. It made navigating the webmap nearly impossible. I chose to replace it with the ESRI imagery basemap because it serves as an interesting comparison and an accuracy check. There is a visible difference between what the raster file picked up as vegetation and what the imagery shows. It's important to note they aren't exactly equivalent. The raster has a 30 meter resolution and is measuring canopy coverage at 10% or more. Each cell is thus generalized while the imagery is more of an eyeball comparison.
