@@ -9,21 +9,15 @@ By extention, the primary contributor of harmful substances in lakes and streams
 ![Percent of Lake Buffer Area Adequately Forested in Maryland](https://user-images.githubusercontent.com/78063176/118919073-d683cd80-b901-11eb-9afb-ce30ef520756.png)
 
 ## Description
-This map relates several factors. At the bottom is a basemap for spatial reference. Above that is a choropleth map of each county's percent area of lake buffer area that contains forest, or more accurately 10% or more canopy cover. The process by which this was done can be found in the link above. Above that still is a raster file of Maryland canopy cover. It serves as comparison between a county's percentage and shown canopy. Lastly, laid on top, are the Maryland lakes.
-
-## Results
-
-
+This map relates several factors. At the bottom is a basemap for spatial reference. Above that is a choropleth map of each county's percent area of lake buffer area that contains forest, or more accurately 10% or more canopy cover. A dark colored county represents one that, for the most part, has vegetation surrounding its lakes. The process by which this was done can be found in the link above. Above that still is a raster file of Maryland canopy cover. It serves as comparison between a county's percentage and shown canopy. Unfortunately,  Lastly, laid on top, are the Maryland lakes.
 
 ---
 ---
 ![Extent of Forested Lake Buffer Area and Percent Working Population of Agricultural Workers](https://user-images.githubusercontent.com/78063176/118919190-0fbc3d80-b902-11eb-8ace-74b9a65327a0.png)
 
-
 ## Description
 
 
-## Results
 
 
-For a closer look, explore each lake in turn [here](/GES_486_Final/Bin/MD_Webmap/index), at this web map. As a friendly warning, this web map contains large datasets and is slow to respond. I recommend navigating through use of the + and - signs or by clicking on the lakes.
+For a closer look explore each lake in turn [here](/GES_486_Final/Bin/MD_Webmap/index), at this web map. As a friendly warning, this web map contains large datasets and is slow to respond. I recommend navigating through use of the + and - signs or by clicking on the lakes.
