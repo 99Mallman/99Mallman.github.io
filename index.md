@@ -23,8 +23,8 @@ A representation of forest loss across Maryland from 2001 to 2018.
 [<img src="project_probation/Forest_Loss_image.PNG?raw=true"/>](/project1_486/index)
 
 ---
-### [Frederick County Maryland Housing Units](/Fred_Housing/index)
-A change through time of Maryland housing units. Please click on the title for more.
+### [Frederick County Housing Units](/Fred_Housing/index)
+Change through time of Maryland housing units. Please click on the title for more.
 ![Allman_Frederick_Housing](https://user-images.githubusercontent.com/78063176/117906030-27604a00-b2a2-11eb-8eec-85c7ce224c8a.gif)
 
 ---
@@ -34,7 +34,7 @@ An elevation model of Honolulu's most famous crater.
 
 ---
 ### [Percent of Developed Land in Maryland](/MD_Dev_Land/index)
-A change in percent developed land in Maryland between 1973 and 2010. Please click on the title for more.
+Cchange in percent developed land in Maryland between 1973 and 2010. Please click on the title for more.
 ![Allman_Percent_Developed_Land_MD](https://user-images.githubusercontent.com/78063176/117906293-a190ce80-b2a2-11eb-830c-8e9cfd51f285.gif)
 
 ---
