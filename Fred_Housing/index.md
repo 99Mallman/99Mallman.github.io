@@ -2,18 +2,16 @@
 Much like the Maryland developed land gif this map was part of a larger project. The purpose was to familiarize myself with census data in Rstudio. Inspired by my first gif, I decided to look into change in housing units of Frederick county over time. The data was retrieved from [social explorer](https://www.socialexplorer.com/data/ACS2019_5yr/metadata/?ds=ACS19_5yr). It was also made using GIMP. 
 
 ### Process
----
-title: "Lab 5: Frederick County Housing"
-subtitle: Census Data
-
-author: Michael Allman
-
-output: html_notebook
-
-date: March 6th, 2021
 
 ---
-#### Setup
+Lab 5: Frederick County Housing
+Michael Allman
+March 6th, 2021
+
+---
+
+
+##### Setup
 First, load the packages needed. For this script I needed to sign up for my own census api key.
 ```{r setup}
 library(tidyverse)
@@ -27,10 +25,11 @@ options(tigris_use_cache = TRUE)
 census_api_key("YOURKEYHERE", overwrite = TRUE, install = TRUE)
 readRenviron("~/.Renviron")
 ```
-#### Get Census Data
+##### Get Census Data
 Use the get_arcs command to get data from the Census. Here's the [Data Dictionary from Social Explorer](https://www.socialexplorer.com/data/ACS2019_5yr/metadata/?ds=ACS19_5yr)
 
-```{r download census}
+```
+{r download census}
 # This gets housing units and population data for Frederick county between 2015 and 2019.
 Fred_hu_19 = get_acs(geography = "tract", 
                   variables = c("pop" = "B03002_001",
@@ -63,8 +62,10 @@ Fred_hu_09 = get_acs(geography = "tract",
                   geometry = TRUE,
                   output = "wide")
 ```
-#### Reproject Data
-```{r test output}
+##### Reproject Data
+
+```
+{r test output}
 # This reprojects the 2019 data.
 Fred_hu_19 = st_transform(Fred_hu_19, 3857) # Web Mercator
 
@@ -75,8 +76,10 @@ Fred_hu_14 = st_transform(Fred_hu_14, 3857) # Web Mercator
 Fred_hu_09 = st_transform(Fred_hu_09, 3857) # Web Mercator
 ```
 
-#### Export data so that it can be imported into QGIS.
-```{r Export Data}
+##### Export data so that it can be imported into QGIS.
+
+```
+{r Export Data}
 st_write(Fred_hu_19, "Fred_hu_19.geojson")
 st_write(Fred_hu_14, "Fred_hu_14.geojson")
 st_write(Fred_hu_09, "Fred_hu_09.geojson")
