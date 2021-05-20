@@ -1,5 +1,5 @@
 # Forested Lake Buffers in Maryland
-This project serves as the final of my Advanced GIS course. It was my goal to compile as many skills I had learned over the semester into one project as I could with the time that I had. In this case, I explored the extent to which the areas immediately adjacent to Maryland lakes are forested. There are three maps in total, each with a different function. The process by which this project was created can be found [here](https://github.com/99Mallman/99Mallman.github.io/blob/master/GES_486_Final/README.md).
+This project serves as the final of my Advanced GIS course. It was my goal to compile as many skills I had learned over the semester into one project as I could with the time that I had. In this case, I explored the extent to which the areas immediately adjacent to Maryland lakes are forested. There are three maps in total, each with a different function. The process by which this project was created can be found [here](https://github.com/99Mallman/99Mallman.github.io/tree/master/GES_486_Final).
 
 ## Background
 
